@@ -74,5 +74,7 @@ function cakekizer(code) {
 		var cake = "$this->html->tag('" + $el.prop('tagName').toLowerCase() + "', '" + content + "', array(" + attributes + ", 'escape' => FALSE));";
 
 	}
-	console.log('<?php echo ' + cake + ' ?>');
+	var result = '<?php echo ' + cake + ' ?>';
+	console.log(result);
+	return result;
 };

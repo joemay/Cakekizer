@@ -4,10 +4,27 @@
 </head>
 <body>
 
-	<a id='dasadsa' href="http://some_url.com" class='ss' data-attribute-a='data-a' data-attribute-b='data-b' >Some text</a>
+	<div id='container'>
+		<a id='dasadsa' href='http://some_url.com' class='ss' data-attribute-a='data-a' data-attribute-b='data-b' >Some text</a>
+	</div>
 
-	<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+	<div id='result'>
+	</div>
 
+<button id='copy-button' data-clipboard-text='Copy Me!' title='Click to copy me.'>Copy to Clipboard</button>
+
+
+    <script src='ZeroClipboard.js'></script>
+	<a href='#' class='btn btn-primary btn-lg active' role='button'>Primary link</a>
+	<script src='js/jquery.js' type='text/javascript' charset='utf-8' ></script>
+	<script src='js/ZeroClipboard.js' type='text/javascript' charset='utf-8' ></script>
+
+	<script src='lib/cakekizer.js' type='text/javascript' charset='utf-8' ></script>
+
+	<script type='text/javascript'>
+	var code = cakekizer($('#container').html());
+	$('#result').html(code);
+	</script>
 
 </body>
 </html>
